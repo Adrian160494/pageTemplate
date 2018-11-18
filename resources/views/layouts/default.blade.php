@@ -4,18 +4,14 @@
     <meta name="viewport" content="width=device-width; initial-scale=1.0"/>
     <title>CMS</title>
     <link rel="stylesheet" href="/css/bootstrap.css" />
-    <script type="text/javascript" src="/ckeditor/ckeditor.js"></script>
     @include('layouts.parts.head')
 </head>
 <body>
-<nav>
-    <div class="container-mine">
-
-    </div>
-</nav>
-<h1>Default template</h1>
+<header>
+    @include('templates.menu.standardMenu',array('menuPositions'=> Helpers::menu('menu_glowne')))
+</header>
 <div class="container">
-    <?php print_r($content); ?>
+    <?php echo $content; ?>
     @yield('content')
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>

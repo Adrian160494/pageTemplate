@@ -3,8 +3,8 @@
         <div class="col-md-8">
             <div class="navigation navbar">
                 <ul class="navbar-nav navv">
-                    <li><a href="#">Projekty</a> </li>
-                    <li><a href="#">CMS</a> </li>
+                    <li><a href="{{url()->route('projekty.index')}}">Projekty</a> </li>
+                    <li><a href="{{url()->route('cms.menu')}}">CMS</a> </li>
                     <li><a href="#">Ustawienia</a> </li>
                     <li><a href="#">Narzędzia</a> </li>
                     <li><a href="#">Panel</a> </li>
@@ -15,7 +15,7 @@
             <div class="navigation navbar">
                 <ul class="navbar-nav navv">
                     <li><span>Zalogowano jako: {{Session::get('username')}}</span></li>
-                    <li><a href="#">Wyloguj</a> </li>
+                    <li><a href="{{url()->route('logout') }}">Wyloguj</a> </li>
                 </ul>
             </div>
         </div>

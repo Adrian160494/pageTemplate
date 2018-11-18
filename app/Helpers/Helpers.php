@@ -8,10 +8,13 @@
 
 namespace App\Helpers;
 
+use App\Http\Model\MenuPositionModel;
+use Illuminate\Support\Facades\View;
+
 class Helpers {
 
     public static function menu($slug){
-
-        return "siema";
+        $menu = MenuPositionModel::getMenuPositionsByProject($slug);
+        return $menu;
     }
 }

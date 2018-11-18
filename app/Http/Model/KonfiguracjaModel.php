@@ -4,13 +4,11 @@ namespace App\Http\Model;
 
 use Illuminate\Support\Facades\DB;
 
-class PagesModel extends BaseModel {
-    protected static $table = "cms_projekty_strony";
-    protected static $first_join = "cms_page_templates";
+class KonfiguracjaModel extends BaseModel {
+    public static $table = "cms_projekty_konfiguracja";
 
-    public static function getPageByRoute($id,$route){
-        $result =DB::select("SELECT cps.id_projektu, cps.nazwa, cps.route, cps.content, cpt.url FROM ".self::$table." AS cps 
-        LEFT JOIN ".self::$first_join." AS cpt ON cpt.id = cps.id_page_template WHERE cps.id_projektu=".$id." AND cps.route='".$route."'");
+    public static function selectWhere($id){
+        $result = DB::select("SELECT sciezka_server, sciezka_route, sciezka_view  FROM ".self::$table." WHERE id_projektu=".$id);
         return $result;
     }
 
@@ -38,7 +36,7 @@ class PagesModel extends BaseModel {
         return $result;
     }
 
-    public static function updateContent($data){
+    public static function update($data,$id){
         if(isset($data['_token'])){
             unset($data['_token']);
         }
@@ -48,13 +46,24 @@ class PagesModel extends BaseModel {
         foreach($data as $k => $v ){
             $counter++;
             if($counter == $data_count){
-                $sql = $sql." ".$k." = '".$v."' ";
+                $sql = $sql." `".$k."` = '".$v."' ";
             } else {
-                $sql = $sql." ".$k." = '".$v."', ";
+                $sql = $sql." `".$k."` = '".$v."', ";
             }
         }
-        $sql = $sql." WHERE id_projektu=".$data['id_projektu']." AND slug='".$data['slug']."'";
+        $sql = $sql." WHERE id_projektu=".$id;
         $result = DB::update($sql);
+
         return $result;
     }
+
+    public static function czyIstnieje($id){
+        $result = DB::select("SELECT * FROM ".self::$table." WHERE id_projektu=".$id);
+        if($result){
+            return 1;
+        } else {
+            return 0;
+        }
+    }
+
 }

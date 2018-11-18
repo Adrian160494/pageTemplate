@@ -11,13 +11,8 @@
 |
 */
 
-Route::get('/',function (){
-    return view('welcome');
-});
-
-
 Route::get('/siema',function (){
     return "Siema elo";
 });
 
-Route::get('/{url}','Controller@getContentFromUrl')->name('database.pages');
+Route::any('/{url?}','Controller@getContentFromUrl')->name('database.pages');

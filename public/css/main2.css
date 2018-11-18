@@ -1,0 +1,21 @@
+.navigation{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown{
+    padding: 20px 10px !important
+}
+
+.navigation > ul > li{
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    cursor: pointer;
+}
+.navigation > ul > li p {
+    margin-bottom:0;
+}

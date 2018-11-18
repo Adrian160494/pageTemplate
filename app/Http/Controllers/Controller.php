@@ -19,6 +19,14 @@ class Controller extends BaseController
         } else {
             $content = PagesModel::getPageByRoute($id_projektu,"/".$url);
         }
-        return view($content[0]->url,array('content'=>$content[0]->content));
+        if($content){
+            $template = $content[0]->url;
+            $contentPage = $content[0]->content;
+        } else {
+            $template = 'layouts.default';
+            $contentPage = '';
+        }
+
+        return view($template,array('content'=>$contentPage));
     }
 }
