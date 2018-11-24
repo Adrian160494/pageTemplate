@@ -14,7 +14,7 @@ class PagesModel extends BaseModel {
         return $result;
     }
 
-    public static function insert($data){
+    public function insert($data){
         if(isset($data['_token'])){
             unset($data['_token']);
         }

@@ -16,7 +16,7 @@ class BaseModel {
         return $result;
     }
 
-    public static function insert($data){
+    public function insert($data){
         if(isset($data['_token'])){
             unset($data['_token']);
         }
@@ -40,7 +40,7 @@ class BaseModel {
         return $result;
     }
 
-    public static function update($data,$id){
+    public function update($data,$id){
         if(isset($data['_token'])){
             unset($data['_token']);
         }

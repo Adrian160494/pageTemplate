@@ -13,7 +13,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        \View::composer('*',function ($view){
+           $view->with('menu', $this->app->make('App\Http\Model\MenuPositionModel'));
+        });
     }
 
     /**
@@ -23,6 +25,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton('App\Http\Model\MenuPositionModel',function (){
+            return new \App\Http\Model\MenuPositionModel();
+        });
     }
 }

@@ -15,7 +15,8 @@ class MenuPositionModel extends BaseModel {
     protected static $table = "cms_menu_positions";
     protected static $tableMenu = "cms_menu";
 
-    public static function getMenuPositionsByProject($slug){
+
+    public function getMenuPositionsByProject($slug){
         $id_projektu = config('app.id_projektu');
         $id =DB::select("SELECT id FROM ".self::$tableMenu." WHERE slug='".$slug."' AND id_projektu=".$id_projektu." AND is_active=1");
         $menu = array();
@@ -62,12 +63,12 @@ class MenuPositionModel extends BaseModel {
         return $menu;
     }
 
-    public static function deletePositionMenu($id){
+    public function deletePositionMenu($id){
         $result = DB::delete("DELETE FROM ".self::$table." WHERE id=".$id.' OR id_parent_submenu='.$id);
         return $result;
     }
 
-    public static function insert($data){
+    public function insert($data){
         if(isset($data['_token'])){
             unset($data['_token']);
         }
@@ -91,7 +92,7 @@ class MenuPositionModel extends BaseModel {
         return $result;
     }
 
-    public static function update($data,$id){
+    public function update($data,$id){
         if(isset($data['_token'])){
             unset($data['_token']);
         }

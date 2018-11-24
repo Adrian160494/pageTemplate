@@ -41,11 +41,11 @@ return [
 
         'mysql' => [
             'driver' => 'mysql',
-            'host' => 'localhost',
+            'host' => env('APP_DATABASE_HOST'),
             'port' => env('DB_PORT', '3306'),
-            'database' => 'cms',
-            'username' => 'root',
-            'password' => '',
+            'database' => env('APP_DATABASE_BASE'),
+            'username' => env('APP_DATABASE_USER'),
+            'password' => env('APP_DATABASE_PASSWORD'),
             'unix_socket' => env('DB_SOCKET', ''),
             'charset' => 'utf8mb4',
             'collation' => 'utf8mb4_unicode_ci',

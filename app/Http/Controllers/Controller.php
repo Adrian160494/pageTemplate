@@ -26,7 +26,14 @@ class Controller extends BaseController
             $template = 'layouts.default';
             $contentPage = '';
         }
-
         return view($template,array('content'=>$contentPage));
+    }
+
+    public function welcome(){
+        return view('welcome',array());
+    }
+
+    public function greeting(){
+        return view('greeting',array());
     }
 }
