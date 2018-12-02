@@ -8,7 +8,7 @@ class PagesModel extends BaseModel {
     protected static $table = "cms_projekty_strony";
     protected static $first_join = "cms_page_templates";
 
-    public static function getPageByRoute($id,$route){
+    public function getPageByRoute($id,$route){
         $result =DB::select("SELECT cps.id_projektu, cps.nazwa, cps.route, cps.content, cpt.url FROM ".self::$table." AS cps 
         LEFT JOIN ".self::$first_join." AS cpt ON cpt.id = cps.id_page_template WHERE cps.id_projektu=".$id." AND cps.route='".$route."'");
         return $result;

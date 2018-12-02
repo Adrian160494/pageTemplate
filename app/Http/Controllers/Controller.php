@@ -15,9 +15,9 @@ class Controller extends BaseController
     public function getContentFromUrl($url="/"){
         $id_projektu = config('app.id_projektu');
         if($url == "/"){
-            $content = PagesModel::getPageByRoute($id_projektu,"/");
+            $content = app()->make('App\Http\Model\PagesModel')->getPageByRoute($id_projektu,"/");
         } else {
-            $content = PagesModel::getPageByRoute($id_projektu,"/".$url);
+            $content = app()->make('App\Http\Model\PagesModel')->getPageByRoute($id_projektu,"/".$url);
         }
         if($content){
             $template = $content[0]->url;

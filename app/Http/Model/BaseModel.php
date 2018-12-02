@@ -6,12 +6,12 @@ use Illuminate\Support\Facades\DB;
 class BaseModel {
     protected static $table = null;
 
-    public static function select(){
+    public function select(){
         $result = DB::select("SELECT * FROM ".self::$table);
         return $result;
     }
 
-    public static function selectWhere($id){
+    public function selectWhere($id){
         $result = DB::select("SELECT * FROM ".self::$table." WHERE id=".$id);
         return $result;
     }
