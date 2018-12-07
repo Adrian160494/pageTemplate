@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/welcome','Controller@welcome');
-Route::get('/greeting','Controller@greeting');
+Route::get('/','Controller@index')->name('main_page');
+Route::get('/kontakt','Controller@contact')->name('contact_page');
+Route::get('/sendEmail','Controller@sendContactEmail')->name('sendemail');
 
 Route::any('/{url?}','Controller@getContentFromUrl')->name('database.pages');
