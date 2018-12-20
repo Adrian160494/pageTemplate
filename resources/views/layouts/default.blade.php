@@ -35,8 +35,8 @@
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse a tortor. </p>
     </div>
     <div id="content">
-        <?php if(isset($contnet)): ?>
-            <?php echo $contnet; ?>
+        <?php if(isset($content)): ?>
+            <?php echo $content; ?>
             <?php endif; ?>
         @yield('content')
     </div>

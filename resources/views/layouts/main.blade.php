@@ -12,8 +12,9 @@
     <!-- Begin Top Menu -->
 @include('layouts.parts.header')
     <!-- End Top Menu -->
-    <div id="sidebar-a"> <img class="border" src="images/image01.jpg" alt="" />
-        <h2>Links</h2>
+    <div id="sidebar-a">
+        @include('templates.banner-logo')
+        <h2>Ostatnie tematy</h2>
         <div class="menu">
             <ul>
                 <li><a href="#">Snapp Happy</a></li>
@@ -35,8 +36,8 @@
         <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse a tortor. </p>
     </div>
         <div id="content">
-        <?php if(isset($contnet)): ?>
-            <?php echo $contnet; ?>
+        <?php if(isset($content)): ?>
+            <?php echo $content; ?>
             <?php endif; ?>
         @yield('content')
         </div>

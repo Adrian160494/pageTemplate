@@ -16,11 +16,20 @@ line-height: 1.5em;
 }
 
 #banner {
-height: 175px;
 padding: 0;
 margin-bottom: 20px;
 background: #fff url(images/image00.jpg) no-repeat;
 color: #333;
+    filter: grayscale(100%);
+}
+
+#banner:hover{
+    filter: none;
+    transition: 1s all ;
+}
+
+#banner img{
+    width: 100%;
 }
 
 		/* TOP NAVIGATION */
@@ -81,7 +90,7 @@ background: inherit;
 
 		/* MAIN CONTENT */
 #content {
-padding: 0 20px 0 20px;
+    padding: 10px 20px 60px 20px;
 margin-left: 170px;
 margin-right: 170px;
 border-left: 1px dashed #333;
@@ -182,10 +191,17 @@ margin: 5px 10px 10px 15px;
 padding: 5px;
 }
 
+.logo-container{
+    padding: 10px;
+}
+
+.logo-image{
+    max-width: 100px;
+
+}
+
 		/* HEADING PROPERTIES */
 h1 {
-width: 30%;
-font-size: 200%;
 letter-spacing: 5px;
 color:#6A9662;
 background: #fff;

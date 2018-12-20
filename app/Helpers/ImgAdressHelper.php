@@ -26,6 +26,11 @@ class ImgAdressHelper{
         return $this;
     }
 
+    public function showOriginal(){
+        $this->picture = $this->server_picture.'/'.$this->photo;
+        return $this->picture;
+    }
+
     public function setSize($width,$height){
         $photo = str_replace('original',$width.'x'.$height,$this->photo);
         $this->picture = $this->server_picture.'/'.$photo;

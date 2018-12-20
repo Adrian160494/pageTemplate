@@ -12,7 +12,6 @@
 */
 
 Route::get('/','Controller@index')->name('main_page');
-Route::get('/kontakt','Controller@contact')->name('contact_page');
-Route::get('/sendEmail','Controller@sendContactEmail')->name('sendemail');
+Route::get('/kontakt','Application\MailController@contact')->name('contact_page');
 
-Route::any('/{url?}','Controller@getContentFromUrl')->name('database.pages');
+//Route::any('/{url?}','Controller@getContentFromUrl')->name('database.pages');
