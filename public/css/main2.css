@@ -137,14 +137,14 @@ a {
   font-size: 12px; }
 
 .top-panel {
-  height: 50px;
+  height: 45px;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   z-index: 100;
   padding: 7px;
-  background: #fff; }
+  background: #476042; }
   .top-panel form {
     display: flex;
     flex-direction: row;

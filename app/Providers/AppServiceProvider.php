@@ -5,6 +5,7 @@ namespace App\Providers;
 use App\Http\Model\BaneryModel;
 use App\Http\Model\KonfiguracjaModel;
 use App\Http\Model\PagesModel;
+use App\Http\Model\User;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -39,6 +40,9 @@ class AppServiceProvider extends ServiceProvider
         });
         $this->app->singleton('App\Http\Model\BaneryModel',function (){
             return new BaneryModel();
+        });
+        $this->app->singleton('Users',function (){
+            return new User();
         });
     }
 }

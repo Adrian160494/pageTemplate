@@ -18,15 +18,18 @@ class Contact {
 
     protected $description;
 
-    protected $sender;
+    protected $senderName;
 
-    public function __construct($receiver,$subject,$email,$description,$sender)
+    protected $senderSurname;
+
+    public function __construct($receiver,$subject,$email,$description,$senderName,$senderSurname)
     {
         $this->receiver = $receiver;
         $this->subject = $subject;
         $this->email = $email;
         $this->description = $description;
-        $this->sender = $sender;
+        $this->senderName = $senderName;
+        $this->senderSurname = $senderSurname;
     }
 
     /**
@@ -93,20 +96,37 @@ class Contact {
         $this->description = $description;
     }
 
+
     /**
      * @return mixed
      */
-    public function getSender()
+    public function getSenderName()
     {
-        return $this->sender;
+        return $this->senderName;
     }
 
     /**
-     * @param mixed $sender
+     * @param mixed $senderName
      */
-    public function setSender($sender)
+    public function setSenderName($senderName)
     {
-        $this->sender = $sender;
+        $this->senderName = $senderName;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSenderSurname()
+    {
+        return $this->senderSurname;
+    }
+
+    /**
+     * @param mixed $senderSurname
+     */
+    public function setSenderSurname($senderSurname)
+    {
+        $this->senderSurname = $senderSurname;
     }
 
 

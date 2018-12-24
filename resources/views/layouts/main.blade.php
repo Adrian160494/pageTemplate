@@ -7,6 +7,7 @@
     @include('layouts.parts.head')
 </head>
 <body>
+@include('messages.messages')
 <div id="container">
     @include('templates.bannerSG')
     <!-- Begin Top Menu -->

@@ -11,6 +11,7 @@ $grey: #ccc;
 $dark_grey: #555;
 $blue: #4f6fad;
 $pink: #ee9cb4;
+$green: #476042;
 
 // Mixins
 
@@ -192,14 +193,14 @@ a{
 //////////////////
 
 .top-panel{
-  height: 50px;
+  height: 45px;
   position: fixed;
   top:0;
   left: 0;
   width:100%;
   z-index:100;
   padding:7px;
-  background: #fff;
+  background: $green;
   form{
     display: flex;
     flex-direction: row;
@@ -217,5 +218,14 @@ a{
   button{
     min-width: 90px;
     height: 30px;
+  }
+}
+
+.register-complete{
+  h2{
+
+  }
+  h3{
+
   }
 }

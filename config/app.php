@@ -232,6 +232,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
         'MenuHelper'   => \App\Helpers\MenuHelper::class,
         'ImgAdressHelper' => \App\Helpers\ImgAdressHelper::class,
+        'LoginHelper'=>\App\Helpers\LoginHelper::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
 

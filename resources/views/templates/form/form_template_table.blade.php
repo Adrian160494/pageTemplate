@@ -22,9 +22,10 @@
                            </p>
                                </li>
                        @elseif($v['type'] == 'password')
-                           <div class="col-md-9">
+                           <li>
+                               <label for="{{$v['name']}}">{{$v['label']}}</label>
                                {{ Form::password($v['name'],$v['value'],['class'=>$v['class']]) }}
-                           </div>
+                           </li>
                        @elseif($v['type'] == 'submit')
                            <p class="left submit-area">
                                <li>
@@ -54,13 +55,14 @@
                        @endif
                 @endforeach
                    @endforeach
+                       <li class="errors">
+                           @foreach($errors->all() as $error)
+                               <span>{{$error}}</span>
+                           @endforeach
+                       </li>
                </ul>
            </div>
-           <div class="errors">
-               @foreach($errors->all() as $error)
-                   <span>{{$error}}</span>
-               @endforeach
-           </div>
+
        <?php echo Form::close() ?>
    </div>
 

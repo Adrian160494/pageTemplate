@@ -5,11 +5,14 @@
   <div class="col-md-8">
   </div>
     <div class="col-md-4">
-        <form method="POST" class="form-inline form-horizontal">
-            <input type="text" placeholder="Login"/>
-            <input type="password" placeholder="Hasło"/>
-            <button type="submit" class="btn-submit2">Zaloguj się</button>
-        </form>
+        <?php $user = Session::get('authUser'); ?>
+        @if(Session::get('authUser'))
+            <div>
+                <p>Zalogowano jako: {{ $user[0]->name }} <a href="{{url()->route('logout')}}">Wyloguj</a> </p>
+            </div>
+        @else
+            @include('templates.form.form_template_inline',array('form'=>\App\Helpers\LoginHelper::getLoginForm(),'url'=>url()->route('login')))
+        @endif
     </div>
 </div>
 <div id="banner">
