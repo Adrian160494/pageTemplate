@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Helpers\ImgAdressHelper;
 use App\Helpers\MenuHelper;
+use App\Helpers\PostsHelper;
 use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
@@ -33,6 +34,9 @@ class ViewHelperProvider extends ServiceProvider
         });
         $this->app->singleton('MenuHelper',function (){
             return new MenuHelper();
+        });
+        $this->app->singleton('PostHelper',function (){
+            return new PostsHelper();
         });
     }
 }

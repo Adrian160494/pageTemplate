@@ -233,6 +233,7 @@ return [
         'MenuHelper'   => \App\Helpers\MenuHelper::class,
         'ImgAdressHelper' => \App\Helpers\ImgAdressHelper::class,
         'LoginHelper'=>\App\Helpers\LoginHelper::class,
+        'PostHelper'=>\App\Helpers\PostsHelper::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
 

@@ -81,14 +81,6 @@ form {
       form ul li p {
         margin: 0;
         padding: 0; }
-      form ul li .divider {
-        margin: 0.5em 0 0.5em 0;
-        border: 0;
-        height: 1px;
-        width: 100%;
-        display: block;
-        background-color: #4f6fad;
-        background-image: linear-gradient(to right, #ee9cb4, #4f6fad); }
       form ul li .req {
         color: #ee9cb4; }
   form label {
@@ -150,6 +142,10 @@ a {
     flex-direction: row;
     justify-content: center;
     align-items: center; }
+  .top-panel .logged-user p {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #fff; }
 
 .btn-submit2 {
   min-width: 90px;
@@ -158,3 +154,89 @@ a {
 .submit-area button {
   min-width: 90px;
   height: 30px; }
+
+.input-wrapper {
+  padding: 10px 0; }
+  .input-wrapper input, .input-wrapper textarea {
+    width: 100%; }
+  .input-wrapper input[type="submit"] {
+    width: 150px; }
+
+.owl-carousel {
+  background: #eee;
+  position: relative !important;
+  bottom: -45px !important; }
+
+.list-of-topics .list-element {
+  padding: 10px 0;
+  width: 100%;
+  border-bottom: 1px solid #999; }
+  .list-of-topics .list-element a {
+    letter-spacing: 4px;
+    font-size: 14px; }
+
+.divider {
+  margin: 0.5em 0 0.5em 0;
+  border: 0;
+  height: 1px;
+  width: 100%;
+  display: block;
+  background-color: #4f6fad;
+  background-image: linear-gradient(to right, #ee9cb4, #4f6fad); }
+
+.pad {
+  padding: 0; }
+
+.info-box {
+  width: 500px;
+  margin: auto;
+  opacity: 0.7;
+  border: 1px solid #4f6fad;
+  padding: 21px;
+  background: #4f6fad;
+  color: #fff;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px; }
+  .info-box h5 {
+    font-size: 13px; }
+
+.content-all {
+  padding: 10px 20px 60px 20px;
+  border-left: 1px dashed #333;
+  border-right: 1px dashed #333;
+  color: #555;
+  background-color: #fff; }
+
+.post-content {
+  margin: 30px 0; }
+  .post-content .head_style {
+    letter-spacing: 3px;
+    color: #6A9662;
+    background: #fff; }
+
+.comment-element {
+  border: 1px solid #000;
+  margin: 10px 0; }
+  .comment-element .comment-top-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 5px;
+    background: #476042;
+    color: #fff; }
+    .comment-element .comment-top-panel .date {
+      padding: 2px 0; }
+      .comment-element .comment-top-panel .date p {
+        margin: 0; }
+    .comment-element .comment-top-panel .author {
+      padding: 2px 0; }
+      .comment-element .comment-top-panel .author p {
+        margin: 0; }
+
+.photo-wrapper .photo {
+  width: 50px;
+  margin: auto; }
+  .photo-wrapper .photo img {
+    width: 50px; }

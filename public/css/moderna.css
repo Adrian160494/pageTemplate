@@ -18,6 +18,7 @@ line-height: 1.5em;
 #banner {
 padding: 0;
 margin-bottom: 20px;
+    min-height: 360px;
 background: #fff url(images/image00.jpg) no-repeat;
 color: #333;
     filter: grayscale(100%);
@@ -81,7 +82,7 @@ background: inherit;
 }
 .menu ul li a {
 color: #F17C0B;
-background: inherit;
+    background: inherit;
 }
 .menu ul li a:hover {
 color: #6A9662;
@@ -90,7 +91,7 @@ background: inherit;
 
 		/* MAIN CONTENT */
 #content {
-    padding: 10px 20px 60px 20px;
+
 margin-left: 170px;
 margin-right: 170px;
 border-left: 1px dashed #333;
@@ -166,13 +167,9 @@ background-color:#476042;
 		/* LINKS */
 a {
 text-decoration: none;
-color: #F17C0B;
-background-color: #fff;
 }
 a:hover {
 text-decoration:underline;
-color: #666;
-background-color:#fff;
 }
 a img {
 border: 0;

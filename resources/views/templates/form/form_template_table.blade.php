@@ -6,40 +6,46 @@
     <div class="row body">
        <?php echo Form::open(['url' => $url]) ?>
            <?php //dump($form);die; ?>
-               <ul>
+               <div class="col-md-12">
                    @foreach($form as $f)
                    @foreach($f as $k => $v)
 
-                       @if($v['type'] == 'textarea')
-                           <li><div class="divider"></div></li>
-                           @endif
-
                        @if($v['type'] == 'text')
-                               <li>
-                           <p class="left">
-                               <label for="{{$v['name']}}">{{$v['label']}}</label>
-                               {{ Form::text($v['name'],$v['value'],['class'=>$v['class']]) }}
-                           </p>
-                               </li>
+                               <div class="col-md-12 input-wrapper">
+                               <div class="col-md-2">
+                                   <label for="{{$v['name']}}">{{$v['label']}}</label>
+                               </div>
+                              <div class="col-md-10">
+                                  {{ Form::text($v['name'],$v['value'],['class'=>$v['class']]) }}
+                              </div>
+
+                               </div>
                        @elseif($v['type'] == 'password')
-                           <li>
-                               <label for="{{$v['name']}}">{{$v['label']}}</label>
-                               {{ Form::password($v['name'],$v['value'],['class'=>$v['class']]) }}
-                           </li>
+                           <div class="col-md-12 input-wrapper">
+                               <div class="col-md-2">
+                                   <label for="{{$v['name']}}">{{$v['label']}}</label>
+                               </div>
+                               <div class="col-md-10">
+                                   {{ Form::password($v['name'],$v['value'],['class'=>$v['class']]) }}
+                               </div>
+                           </div>
                        @elseif($v['type'] == 'submit')
-                           <p class="left submit-area">
-                               <li>
-                               {{ Form::submit($v['name'],['class'=>$v['class']]) }}
-                               <small>or press <strong>enter</strong></small>
-                               </li>
-                           </p>
+                               <div class="col-md-12 input-wrapper">
+                                   <div class="col-md-6">
+                                       {{ Form::submit($v['name'],['class'=>$v['class']]) }}
+                                       <small>or press <strong>enter</strong></small>                                   </div>
+                                   <div class="col-md-6">
+                                   </div>
+                               </div>
                        @elseif($v['type'] == 'textarea')
-                               <li>
-                           <p class="left">
-                               <label for="{{$v['name']}}">{{$v['label']}}</label>
-                               {!! Form::textarea($v['name'],null, array('class'=>$v['class'],'rows' => $v['rows'], 'cols' => $v['cols'])) !!}
-                           </p>
-                               </li>
+                               <div class="col-md-12 input-wrapper">
+                                   <div class="col-md-2">
+                                       <label for="{{$v['name']}}">{{$v['label']}}</label>
+                                   </div>
+                                   <div class="col-md-10">
+                                       {!! Form::textarea($v['name'],null, array('class'=>$v['class'],'rows' => $v['rows'], 'cols' => $v['cols'])) !!}
+                                   </div>
+                               </div>
                        @elseif($v['type'] == 'checkbox')
                            <div class="col-md-9">
                                {{ Form::checkbox($v['name']) }}
@@ -49,18 +55,23 @@
                                {{ Form::hidden($v['name'],$v['value']) }}
                            </div>
                        @elseif($v['type'] == 'select')
-                           <div class="col-md-9">
-                               {{ Form::select($v['name'], $v['values'],$v['default']) }}
-                           </div>
+                               <div class="col-md-12 input-wrapper">
+                                   <div class="col-md-2">
+                                       <label for="{{$v['name']}}">{{$v['label']}}</label>
+                                   </div>
+                                   <div class="col-md-10">
+                                       {{ Form::select($v['name'], $v['values'],$v['default'],  ['class' => $v['class']]) }}
+                                   </div>
+                               </div>
                        @endif
                 @endforeach
                    @endforeach
-                       <li class="errors">
+                       <div class="errors">
                            @foreach($errors->all() as $error)
                                <span>{{$error}}</span>
                            @endforeach
-                       </li>
-               </ul>
+                       </div>
+               </div>
            </div>
 
        <?php echo Form::close() ?>

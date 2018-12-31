@@ -114,15 +114,6 @@ form {
         margin: 0;
         padding: 0;
       }
-      .divider {
-        margin: 0.5em 0 0.5em 0;
-        border: 0;
-        height: 1px;
-        width: 100%;
-        display: block;
-        background-color: $blue;
-        background-image: linear-gradient(to right, $pink, $blue);
-      }
       .req {
         color: $pink;
       }
@@ -207,6 +198,13 @@ a{
     justify-content: center;
     align-items: center;
   }
+  .logged-user{
+    p{
+      margin-top:5px;
+      font-size: 14px;
+      color: #fff;
+    }
+  }
 }
 
 .btn-submit2{
@@ -227,5 +225,117 @@ a{
   }
   h3{
 
+  }
+}
+
+.input-wrapper{
+  padding: 10px 0;
+  input, textarea{
+    width: 100%;
+  }
+  input[type="submit"]{
+    width: 150px;
+  }
+}
+
+.owl-carousel{
+  background: #eee;
+  position: relative !important;
+  bottom: -45px !important;
+}
+
+.list-of-topics{
+  .list-element{
+    padding: 10px 0;
+    width: 100%;
+    border-bottom: 1px solid #999;
+    a{
+      letter-spacing: 4px;
+      font-size: 14px;
+
+    }
+  }
+}
+
+.divider {
+  margin: 0.5em 0 0.5em 0;
+  border: 0;
+  height: 1px;
+  width: 100%;
+  display: block;
+  background-color: $blue;
+  background-image: linear-gradient(to right, $pink, $blue);
+}
+
+.pad{
+  padding: 0;
+}
+
+.info-box{
+  width: 500px;
+  margin: auto;
+  opacity: 0.7;
+  border: 1px solid #4f6fad;
+  padding: 21px;
+  background: #4f6fad;
+  color: #fff;
+  text-align: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+    h5{
+      font-size: 13px;
+    }
+}
+.content-all{
+  padding: 10px 20px 60px 20px;
+  //margin-left: 170px;
+  //margin-right: 170px;
+  border-left: 1px dashed #333;
+  border-right: 1px dashed #333;
+  color: #555;
+  background-color: #fff;
+}
+
+.post-content {
+  margin: 30px 0;
+  .head_style{
+    letter-spacing: 3px;
+    color: #6A9662;
+    background: #fff;
+  }
+}
+
+.comment-element{
+  border: 1px solid #000;
+  margin:10px 0;
+  .comment-top-panel {
+    display: flex;
+  justify-content: center;
+    align-items: center;
+    .date{
+      padding: 2px 0;
+      p{
+        margin:0;
+      }
+    }
+    .author{
+      padding: 2px 0;
+      p{
+        margin:0;
+      }
+    }
+    padding: 0 5px;
+    background: #476042;
+    color: #fff;
+  }
+}
+.photo-wrapper{
+  .photo{
+    width: 50px;
+    margin: auto;
+    img{
+      width: 50px;
+    }
   }
 }
