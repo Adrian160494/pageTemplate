@@ -41,7 +41,7 @@
             <?php endif; ?>
         @yield('content')
     </div>
-    <div id="footer"><a href="#">homepage</a> | <a href="#">contact</a> | <a href="http://validator.w3.org/check?uri=referer">xhtml</a> | <a href="http://jigsaw.w3.org/css-validator">css</a>|  &copy; 2006 Anyone |  Design by <a href="http://www.mitchinson.net"> www.mitchinson.net</a> | </div>
+
 </div>
 
 

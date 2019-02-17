@@ -20,6 +20,11 @@
         </div>
         <div class="col-md-12 divider"></div>
         <div class="post-description col-md-12">
+            @if($post->sciezka)
+            <div class="post_photo">
+                <img src="{{$imgAdress->showImg($post->sciezka)->setSize(400,200)->setFit()->show()}}"/>
+            </div>
+            @endif
             <?php echo $post->description; ?>
         </div>
     </div>

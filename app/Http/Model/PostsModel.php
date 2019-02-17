@@ -19,7 +19,7 @@ class PostsModel {
     }
 
     public function getPostById($id){
-        $result = DB::select("SELECT cp.*,cc.name as category FROM ".self::$table." as cp INNER JOIN cms_category as cc ON cc.id = cp.id_category   WHERE cp.is_active=1 AND cp.id=".$id);
+        $result = DB::select("SELECT cp.*,cpp.*,cc.name as category FROM ".self::$table." as cp LEFT JOIN cms_category as cc ON cc.id = cp.id_category  LEFT JOIN cms_pliki as cpp ON cpp.id = cp.id_plik  WHERE cp.is_active=1 AND cp.id=".$id);
         return $result[0];
     }
 

@@ -21,7 +21,7 @@
     <div class="banner-carousel owl-carousel">
         @foreach($banerSG as $b)
             <div>
-                <img src="{{$imgAdress->showImg($b->sciezka)->setSize(1920,400)}}"/>
+                <img src="{{$imgAdress->showImg($b->sciezka)->setSize(1920,400)->setFit()->show()}}"/>
             </div>
             @endforeach
     </div>

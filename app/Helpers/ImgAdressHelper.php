@@ -31,9 +31,18 @@ class ImgAdressHelper{
         return $this->picture;
     }
 
+    public function setFit(){
+        $this->picture = $this->picture."&fit=1";
+        return $this;
+    }
+
     public function setSize($width,$height){
-        $photo = str_replace('original',$width.'x'.$height,$this->photo);
-        $this->picture = $this->server_picture.'/'.$photo;
+        $photo = $this->photo;
+        $this->picture = $this->server_picture.'/'.$photo."?width=".$width."&height=".$height;
+        return $this;
+    }
+
+    public function show(){
         return $this->picture;
     }
 
